@@ -2,6 +2,8 @@
 
 A production-ready, high-performance WordPress plugin designed to seamlessly convert JPG and PNG images to the modern **WebP** format using a hybrid runtime + bulk optimization engine.
 
+**💎 100% FREE FOREVER - No Hidden Fees!**
+
 #### **🚀 Key Features**
 *   **Hybrid Optimization**: Automatic runtime generation + powerful bulk processing tool.
 *   **Smart Mirroring**: Keeps your main uploads folder clean by storing optimized assets in `/brix-optimized/`.

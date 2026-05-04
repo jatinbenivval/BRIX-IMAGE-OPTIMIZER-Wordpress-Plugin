@@ -2,6 +2,8 @@
 
 **BRIX Image Optimizer** is a production-ready, high-performance WordPress plugin designed to seamlessly convert JPG and PNG images to the modern **WebP** format. Built with a focus on speed, server safety, and clean file management.
 
+### 💎 100% FREE FOREVER - No Subscriptions, No Hidden Costs!
+
 Developed by **JATIN BENIWAL** ([BRIXFLY SERVICES](https://brixfly.com)).
 
 ---
