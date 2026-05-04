@@ -222,7 +222,7 @@ class BRIX_Image_Optimizer {
             <div style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <div style="background: #46b450; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 20px;">B</div>
+                        <img src="<?php echo plugin_dir_url(__FILE__) . 'assets/logo.png'; ?>" alt="BRIX Logo" style="width: 50px; height: 50px; border-radius: 8px; object-fit: contain;">
                         <h1 style="margin: 0;">BRIX Image Optimizer <span style="font-weight: 300; font-size: 0.5em; vertical-align: middle; background: #46b450; color: #fff; padding: 2px 8px; border-radius: 10px;">v1.0.0</span> <span style="font-weight: bold; font-size: 0.4em; color: #46b450; border: 1px solid #46b450; padding: 2px 8px; border-radius: 10px; margin-left: 5px;">FREE FOREVER</span></h1>
                     </div>
                     <button id="brix-clear-cache" class="button button-link" style="color: #d63638; text-decoration: none;">Clear All Optimized Images</button>

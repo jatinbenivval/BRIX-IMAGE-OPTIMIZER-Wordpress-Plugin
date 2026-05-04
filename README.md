@@ -1,4 +1,4 @@
-# BRIX Image Optimizer 🚀
+# <img src="assets/logo.png" width="40" height="40" align="center"> BRIX Image Optimizer 🚀
 
 **BRIX Image Optimizer** is a production-ready, high-performance WordPress plugin designed to seamlessly convert JPG and PNG images to the modern **WebP** format. Built with a focus on speed, server safety, and clean file management.
 
