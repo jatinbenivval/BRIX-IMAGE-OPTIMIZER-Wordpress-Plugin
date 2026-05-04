@@ -1,12 +1,17 @@
 <?php
 /**
  * Plugin Name: BRIX Image Optimizer
+ * Plugin URI: https://brixfly.com/brix-image-optimizer-plugin
  * Description: Production-ready hybrid WebP optimizer. Runtime on-demand generation + bulk tools.
  * Version: 1.0.0
- * Author: <a href="https://jatinbeniwal.in" target="_blank">JATIN BENIWAL</a> (<a href="https://brixfly.com" target="_blank">BRIXFLY SERVICES</a>)
+ * Author: JATIN BENIWAL (BRIXFLY SERVICES)
  * Author URI: https://jatinbeniwal.in
- * Company: BRIXFLY SERVICES
- * License: GPLv2 or later (Credit Required)
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Requires at least: 5.0
+ * Tested up to: 6.5
+ * Requires PHP: 7.4
+ * Text Domain: brix-image-optimizer
  */
 
 if (!defined('ABSPATH')) exit;
