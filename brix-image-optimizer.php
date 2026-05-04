@@ -3,9 +3,10 @@
  * Plugin Name: BRIX Image Optimizer
  * Description: Production-ready hybrid WebP optimizer. Runtime on-demand generation + bulk tools.
  * Version: 1.0.0
- * Author: <a href="https://jatinbeniwal.in" target="_blank">Jatin Beniwal</a> (<a href="https://brixly.com" target="_blank">BRIXLY.com</a>)
+ * Author: <a href="https://jatinbeniwal.in" target="_blank">JATIN BENIWAL</a> (<a href="https://brixfly.com" target="_blank">BRIXFLY SERVICES</a>)
  * Author URI: https://jatinbeniwal.in
- * Company: BRIXLY.com
+ * Company: BRIXFLY SERVICES
+ * License: GPLv2 or later (Credit Required)
  */
 
 if (!defined('ABSPATH')) exit;
@@ -252,7 +253,7 @@ class BRIX_Image_Optimizer {
                     <div style="background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0;">
                         <h3 style="margin-top: 0;">Live Statistics</h3>
                         <?php $this->dashboard_widget_content(); ?>
-                        <p style="font-size: 11px; color: #94a3b8; margin-top: 20px; text-align: center;">Developed by <strong>Jatin Beniwal</strong> for BRIXLY.com</p>
+                        <p style="font-size: 11px; color: #94a3b8; margin-top: 20px; text-align: center;">Developed by <strong><a href="https://jatinbeniwal.in" target="_blank" style="color: inherit;">Jatin Beniwal</a></strong> for <a href="https://brixfly.com" target="_blank" style="color: inherit;"><strong>BRIXFLY SERVICES</strong></a></p>
                     </div>
                 </div>
             </div>

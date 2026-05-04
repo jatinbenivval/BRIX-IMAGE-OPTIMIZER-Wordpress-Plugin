@@ -2,7 +2,18 @@
 
 **BRIX Image Optimizer** is a production-ready, high-performance WordPress plugin designed to seamlessly convert JPG and PNG images to the modern **WebP** format. Built with a focus on speed, server safety, and clean file management.
 
-Developed by **Jatin Beniwal** for [BRIXLY.com](https://brixly.com).
+Developed by **JATIN BENIWAL** ([BRIXFLY SERVICES](https://brixfly.com)).
+
+---
+
+## ⚖️ License & Credits (IMPORTANT)
+
+This project is open-source, but **Proper Credit is MANDATORY**. 
+
+If you use, fork, or build anything based on this codebase, you **must** include the following credits:
+- **Developer**: [Jatin Beniwal](https://jatinbeniwal.in)
+- **Company**: [BRIXFLY SERVICES](https://brixfly.com)
+- **Official Page**: [brixfly.com/brix-image-optimizer-plugin](https://brixfly.com/brix-image-optimizer-plugin)
 
 ---
 
@@ -23,7 +34,7 @@ Developed by **Jatin Beniwal** for [BRIXLY.com](https://brixly.com).
 
 ## 🚀 Installation
 
-1. Download the `brix-image-optimizer.zip`.
+1. Download the `brix-image-optimizer.zip` from the [Releases](https://github.com/jatinbenivval/BRIX-IMAGE-OPTIMIZER-Wordpress-Plugin/releases) section.
 2. Go to **Plugins > Add New** in your WordPress dashboard.
 3. Click **Upload Plugin** and select the ZIP file.
 4. **Activate** the plugin.
@@ -31,22 +42,15 @@ Developed by **Jatin Beniwal** for [BRIXLY.com](https://brixly.com).
 
 ---
 
-## 🛠 Technical Details
-
-- **Requirements**: PHP 7.4+, GD Library or Imagick support.
-- **Logic**: Uses a content filter to swap URLs at runtime. It checks for file existence before serving to ensure no broken images.
-- **Architecture**: Separates optimized assets from original uploads to simplify backups and site migrations.
-
----
-
 ## 👨‍💻 Developer Information
 
 - **Developer**: Jatin Beniwal
 - **Website**: [jatinbeniwal.in](https://jatinbeniwal.in)
-- **Company**: [BRIXLY](https://brixly.com)
+- **Company**: [BRIXFLY SERVICES](https://brixfly.com)
+- **Plugin Landing Page**: [brixfly.com/brix-image-optimizer-plugin](https://brixfly.com/brix-image-optimizer-plugin)
 
 ---
 
 ## 📜 License
 
-This project is licensed under the GPL-2.0+ License.
+This project is licensed under the GPL-2.0+ License. **Redistribution or modification requires mandatory credit to Jatin Beniwal (BRIXFLY SERVICES).**
