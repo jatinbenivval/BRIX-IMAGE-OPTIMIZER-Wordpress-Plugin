@@ -4,3 +4,4 @@ Thumbs.db
 *.log
 .git/
 node_modules/
+guide.md
