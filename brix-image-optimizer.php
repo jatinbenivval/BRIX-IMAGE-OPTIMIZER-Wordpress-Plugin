@@ -216,6 +216,7 @@ class BRIX_Image_Optimizer {
     }
 
     public function settings_page() {
+        $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'optimization';
         ?>
         <div class="wrap" style="max-width: 900px;">
             <div style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
@@ -226,8 +227,14 @@ class BRIX_Image_Optimizer {
                     </div>
                     <button id="brix-clear-cache" class="button button-link" style="color: #d63638; text-decoration: none;">Clear All Optimized Images</button>
                 </div>
+
+                <h2 class="nav-tab-wrapper" style="margin-bottom: 20px; border-bottom: 1px solid #ccc;">
+                    <a href="?page=brix-optimizer&tab=optimization" class="nav-tab <?php echo $active_tab == 'optimization' ? 'nav-tab-active' : ''; ?>">Optimization</a>
+                    <a href="?page=brix-optimizer&tab=about" class="nav-tab <?php echo $active_tab == 'about' ? 'nav-tab-active' : ''; ?>">About & Support</a>
+                </h2>
                 
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px;">
+                <?php if ($active_tab == 'optimization') : ?>
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 10px;">
                     <div>
                         <h3>Optimization Controls</h3>
                         <p>BRIX Optimizer uses a <strong>Hybrid Logic</strong>: images are automatically optimized when they are uploaded or when someone visits your site. You can also force a bulk optimization below.</p>
@@ -244,8 +251,8 @@ class BRIX_Image_Optimizer {
                                 <li><strong>Runtime:</strong> When a user visits your site, BRIX checks if a WebP version exists. If not, it creates it instantly.</li>
                                 <li><strong>Bulk Tool:</strong> Use the button above to pre-generate WebP for your entire library.</li>
                                 <li><strong>Safety:</strong> We never touch your original JPG/PNG files. We store optimized versions in a separate <code>/brix-optimized/</code> folder.</li>
-                                <li><strong>Deactivation:</strong> If you deactivate the plugin, we stop serving WebP images, but your <code>/brix-optimized/</code> folder stays safe on your server.</li>
-                                <li><strong>Uninstall:</strong> If you delete the plugin completely, we will automatically wipe the <code>/brix-optimized/</code> folder to save your disk space.</li>
+                                <li><strong>Deactivation:</strong> If you disable the plugin, your site will instantly revert to using the original images.</li>
+                                <li><strong>Uninstall:</strong> If you delete the plugin completely, we automatically wipe the <code>/brix-optimized/</code> folder.</li>
                             </ul>
                         </div>
                     </div>
@@ -256,6 +263,32 @@ class BRIX_Image_Optimizer {
                         <p style="font-size: 11px; color: #94a3b8; margin-top: 20px; text-align: center;">Developed by <strong><a href="https://jatinbeniwal.in" target="_blank" style="color: inherit;">Jatin Beniwal</a></strong> for <a href="https://brixfly.com" target="_blank" style="color: inherit;"><strong>BRIXFLY SERVICES</strong></a></p>
                     </div>
                 </div>
+                <?php else : ?>
+                <div style="margin-top: 20px; line-height: 1.6;">
+                    <h3>About BRIX Image Optimizer</h3>
+                    <p>BRIX Image Optimizer is a professional-grade media management suite designed for high-performance WordPress environments. Our mission is to provide the fastest, safest, and most organized way to serve WebP images.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+                            <h4>👨‍💻 Developer Information</h4>
+                            <p><strong>Lead Developer:</strong> Jatin Beniwal<br>
+                            <strong>Portfolio:</strong> <a href="https://jatinbeniwal.in" target="_blank">jatinbeniwal.in</a><br>
+                            <strong>Company:</strong> BRIXFLY SERVICES</p>
+                        </div>
+                        <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+                            <h4>🌐 Resources & Support</h4>
+                            <p><strong>Official Site:</strong> <a href="https://brixfly.com" target="_blank">brixfly.com</a><br>
+                            <strong>GitHub Source:</strong> <a href="https://github.com/jatinbenivval/BRIX-IMAGE-OPTIMIZER-Wordpress-Plugin" target="_blank">View on GitHub</a><br>
+                            <strong>Landing Page:</strong> <a href="https://brixfly.com/brix-image-optimizer-plugin" target="_blank">Plugin Home</a></p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px; padding: 20px; background: #fff8f8; border-left: 4px solid #d63638;">
+                        <h4 style="margin-top: 0; color: #d63638;">⚖️ Contribution & Credits</h4>
+                        <p style="margin-bottom: 0;">This plugin is open-source. However, **Proper Credit is MANDATORY** for any forks, redistribution, or derived works. You must credit <strong>Jatin Beniwal (BRIXFLY SERVICES)</strong> and link back to the official landing page.</p>
+                    </div>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
 
