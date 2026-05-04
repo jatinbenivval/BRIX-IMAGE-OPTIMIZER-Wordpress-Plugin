@@ -75,11 +75,11 @@ class BRIX_Image_Optimizer {
     public function dashboard_widget_content() {
         $stats = get_option('brix_stats', ['total_optimized' => 0, 'bytes_saved' => 0]);
         echo '<div style="text-align: center; padding: 10px;">';
-        echo '<h2 style="font-size: 2.5em; margin: 0;">' . $stats['total_optimized'] . '</h2>';
-        echo '<p style="color: #666;">Images Optimized</p>';
+        echo '<h2 style="font-size: 2.5em; margin: 0;">' . esc_html($stats['total_optimized']) . '</h2>';
+        echo '<p style="color: #666;">' . esc_html__('Images Optimized', 'brix-image-optimizer') . '</p>';
         echo '<hr>';
-        echo '<h2 style="font-size: 2em; margin: 0; color: #46b450;">' . size_format($stats['bytes_saved']) . '</h2>';
-        echo '<p style="color: #666;">Disk Space Saved</p>';
+        echo '<h2 style="font-size: 2em; margin: 0; color: #46b450;">' . esc_html(size_format($stats['bytes_saved'])) . '</h2>';
+        echo '<p style="color: #666;">' . esc_html__('Disk Space Saved', 'brix-image-optimizer') . '</p>';
         echo '</div>';
     }
 
@@ -221,16 +221,16 @@ class BRIX_Image_Optimizer {
     }
 
     public function settings_page() {
-        $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'optimization';
+        $active_tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : 'optimization';
         ?>
         <div class="wrap" style="max-width: 900px;">
             <div style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <img src="<?php echo plugin_dir_url(__FILE__) . 'assets/logo.png'; ?>" alt="BRIX Logo" style="width: 50px; height: 50px; border-radius: 8px; object-fit: contain;">
-                        <h1 style="margin: 0;">BRIX Image Optimizer <span style="font-weight: 300; font-size: 0.5em; vertical-align: middle; background: #46b450; color: #fff; padding: 2px 8px; border-radius: 10px;">v1.0.0</span> <span style="font-weight: bold; font-size: 0.4em; color: #46b450; border: 1px solid #46b450; padding: 2px 8px; border-radius: 10px; margin-left: 5px;">FREE FOREVER</span></h1>
+                        <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . 'assets/logo.png'); ?>" alt="<?php echo esc_attr__('BRIX Logo', 'brix-image-optimizer'); ?>" style="width: 50px; height: 50px; border-radius: 8px; object-fit: contain;">
+                        <h1 style="margin: 0;"><?php esc_html_e('BRIX Image Optimizer', 'brix-image-optimizer'); ?> <span style="font-weight: 300; font-size: 0.5em; vertical-align: middle; background: #46b450; color: #fff; padding: 2px 8px; border-radius: 10px;">v1.0.0</span> <span style="font-weight: bold; font-size: 0.4em; color: #46b450; border: 1px solid #46b450; padding: 2px 8px; border-radius: 10px; margin-left: 5px;"><?php esc_html_e('FREE FOREVER', 'brix-image-optimizer'); ?></span></h1>
                     </div>
-                    <button id="brix-clear-cache" class="button button-link" style="color: #d63638; text-decoration: none;">Clear All Optimized Images</button>
+                    <button id="brix-clear-cache" class="button button-link" style="color: #d63638; text-decoration: none;"><?php esc_html_e('Clear All Optimized Images', 'brix-image-optimizer'); ?></button>
                 </div>
 
                 <h2 class="nav-tab-wrapper" style="margin-bottom: 20px; border-bottom: 1px solid #ccc;">
@@ -311,7 +311,7 @@ class BRIX_Image_Optimizer {
                         type: 'POST',
                         data: {
                             action: 'brix_bulk_process',
-                            security: '<?php echo wp_create_nonce("brix_nonce"); ?>'
+                            security: '<?php echo esc_attr(wp_create_nonce("brix_nonce")); ?>'
                         },
                         success: function(response) {
                             if (response.success && response.data.remaining > 0) {
@@ -338,7 +338,7 @@ class BRIX_Image_Optimizer {
                     type: 'POST',
                     data: {
                         action: 'brix_clear_cache',
-                        security: '<?php echo wp_create_nonce("brix_nonce"); ?>'
+                        security: '<?php echo esc_attr(wp_create_nonce("brix_nonce")); ?>'
                     },
                     success: function() {
                         location.reload();
